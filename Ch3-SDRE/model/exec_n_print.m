@@ -80,15 +80,16 @@ Results(period,active_days,5) = Tmax;
 
 path = sprintf('figures\\case %d\\[%d-%d]', case_sel, period, active_days);
 %%% Cells figure
+
 fig_cells = figure(1);
-% plot(Cells_out.time,Cells_out.data,'LineWidth',1)
+
+plot(Cells_out.time,Cells_out.data,'LineWidth',1)
+hold on;
 if period==1 && active_days==1 
     stairs(Drug_out.time,Drug_out.data,'k','LineWidth',1,'color',[0.35,0.35,0.35])
 else
     stairs(Drug_out.time,Drug_out.data,'k','LineWidth',1,'color',[0.4,0.4,0.4])
 end
-hold on
-plot(Cells_out.time,Cells_out.data,'LineWidth',1)
 
 
 if period==1 && active_days==1 
